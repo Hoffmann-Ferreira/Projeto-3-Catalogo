@@ -3,10 +3,11 @@ import express from "express";
 import path from "path";
 
 const __dirname = path.resolve(path.dirname(""));
+
 const app = express();
 
 app.set("view engine", "ejs");
-
+app.use(express.static(path.join(__dirname, "public")));
 
 
 const port = 3002;
@@ -16,7 +17,9 @@ app.listen(port, () =>{
 } );
 
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+    res.render("index.ejs", {
+        aprendendo
+    });
 
 });
  
@@ -28,3 +31,12 @@ app.get("/detalhes", (req, res) =>{
 app.get("/cadastro", (req, res) =>{
     res.render("cadastro.ejs");
 });
+
+// Array exebido dentro do ejs
+
+let aprendendo = [
+    {
+        filme: "Senhor dos Aneis",
+        ano: 2001,
+    }
+]
