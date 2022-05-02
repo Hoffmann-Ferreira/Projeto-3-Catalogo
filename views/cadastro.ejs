@@ -10,7 +10,19 @@
 <body>
     
     <%- include("./partials/header.ejs")  %> 
+<h1>Hello world</h1>
+<main>
+    <form method="post" action="/cadastro">
+        <fieldset>
+            <label  for="nome">Nome </label>
+            <input type="text" name="nome">
+            <label  for="img">Imagen </label>
+            <input type="url" name="img">
+        </fieldset>
+        <button type="button">Enviar</button>
+    </form>
 
+</main>
 
     <%- include("./partials/footer.ejs")  %> 
 

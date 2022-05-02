@@ -11,6 +11,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 const port = 3002;
+app.use(express.urlencoded({extended:true}));
+app.use(express.json())
 
 app.listen(port, () =>{
     console.log(`rodando na porta ${port}`)
@@ -24,13 +26,12 @@ app.get("/", (req, res) => {
 });
  
 app.get("/detalhes/:id", (req, res) =>{
-    let filme = [];
+    let filme;
     colecao.filter((element) => {
         if(element.id == req.params.id){
-            filme.push(element);
+            filme = element;
         };
     });
-    console.log(filme);
     res.render("detalhes.ejs", {
         filme
     });
@@ -40,8 +41,16 @@ app.get("/detalhes/:id", (req, res) =>{
 app.get("/cadastro", (req, res) =>{
     res.render("cadastro.ejs");
 });
+app.post("/cadastro", (req, res) =>{
+    let identifi = colecao[colecao.length - 1].id +1;
+    const {nome, img} = req.body;
+    colecao.push({id:identifi, nome, img});
+    // res.send("Fui enviado");
+    res.redirect("/");
+});
 
 // Array exebido dentro do ejs
+
 
 let colecao = [
     {
@@ -50,4 +59,4 @@ let colecao = [
         nome: "Senhor dos Aneis",
         ano: 2001,
     }
-]
+];
