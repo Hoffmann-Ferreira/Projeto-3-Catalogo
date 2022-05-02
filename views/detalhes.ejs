@@ -8,6 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <%- include("./partials/header.ejs")  %> 
+
+    <h1><%= filme[0].nome %> </h1>
+    <img src="<%= filme[0].img %> ">
+
+    <%- include("./partials/footer.ejs")  %> 
 </body>
 </html>

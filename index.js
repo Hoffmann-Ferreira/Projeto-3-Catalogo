@@ -18,13 +18,22 @@ app.listen(port, () =>{
 
 app.get("/", (req, res) => {
     res.render("index.ejs", {
-        aprendendo
+        colecao
     });
 
 });
  
-app.get("/detalhes", (req, res) =>{
-    res.render("detalhes.ejs");
+app.get("/detalhes/:id", (req, res) =>{
+    let filme = [];
+    colecao.filter((element) => {
+        if(element.id == req.params.id){
+            filme.push(element);
+        };
+    });
+    console.log(filme);
+    res.render("detalhes.ejs", {
+        filme
+    });
 
 });
 
@@ -34,9 +43,11 @@ app.get("/cadastro", (req, res) =>{
 
 // Array exebido dentro do ejs
 
-let aprendendo = [
+let colecao = [
     {
-        filme: "Senhor dos Aneis",
+        id: 1,
+        img: "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/92/91/32/20224832.jpg",
+        nome: "Senhor dos Aneis",
         ano: 2001,
     }
 ]

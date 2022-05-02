@@ -8,8 +8,17 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <%- include("./partials/header.ejs")  %> 
+    </header>
     <h1>Olá mundo</h1>
-    <% aprendendo.forEach(element => { %>
-        <%= element.filme %> 
+    <% colecao.forEach(element => { %>
+        <a href="/detalhes/<%= element.id %> ">
+        <%= element.nome %>
+        <img src="<%= element.img %>"> 
+        </a>
     <% }) %>
+
+        <%- include("./partials/footer.ejs")  %> 
+</body>
 </html>
