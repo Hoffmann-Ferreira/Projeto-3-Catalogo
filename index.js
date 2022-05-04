@@ -2,11 +2,7 @@ import { render } from "ejs";
 import express from "express";
 import path from "path";
 import { routers } from "./src/routers/routers.js";
-import dotenv from "dotenv";
 
-dotenv.config();
-
-console.log(process.env.DB_BASE);
 
 const __dirname = path.resolve(path.dirname(""));
 const app = express();
