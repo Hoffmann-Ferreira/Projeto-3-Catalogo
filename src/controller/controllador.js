@@ -1,6 +1,5 @@
 import { connection } from "../database/connection.js";
 import { filmes } from "../model/filmes.js"
-
 // let colecao = [
 //   {
 //     id: 1,
@@ -11,13 +10,13 @@ import { filmes } from "../model/filmes.js"
 // ];
 
 export const getIndex = async (req, res) => {
-  const exibFilme = await connection.query('SELECT * FROM filmes.js', {
+  const exibFilme = await connection.query('SELECT * FROM filmes', {
     model: filmes
   })
   console.log(exibFilme)
-  console.log(filmes)
+
   res.render("index.ejs", {
     exibFilme
-  })
+  });
 };
 
