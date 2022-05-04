@@ -1,13 +1,12 @@
 import  Sequelize  from "sequelize";
 import { connection } from "../database/connection.js";
 
-const filmes = connection.define("filmes", {
+export const filmes = connection.define("filmes", {
     id:{
         type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
-
     },
     nome:{
         type: Sequelize.STRING,
@@ -34,7 +33,6 @@ const filmes = connection.define("filmes", {
     critica:{
         type: Sequelize.STRING,
     }, 
-
 }, {
     freezeTableName: true,
     createdAt: false,

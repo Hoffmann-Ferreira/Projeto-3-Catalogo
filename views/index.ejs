@@ -12,12 +12,7 @@
         <%- include("./partials/header.ejs")  %> 
     </header>
     <h1>Olá mundo</h1>
-    <% colecao.forEach(element => { %>
-        <a href="/detalhes/<%= element.id %> ">
-        <%= element.nome %>
-        <img src="<%= element.img %>"> 
-        </a>
-    <% }) %>
+   
 
         <%- include("./partials/footer.ejs")  %> 
 </body>
