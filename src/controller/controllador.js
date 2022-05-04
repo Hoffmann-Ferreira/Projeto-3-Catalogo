@@ -1,3 +1,5 @@
+import {connection} from "../database/connection.js";
+//43
 let colecao = [
   {
     id: 1,
@@ -12,3 +14,4 @@ export const getIndex = (req, res) => {
     colecao,
   });
 };
+
