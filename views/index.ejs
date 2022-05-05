@@ -12,7 +12,14 @@
         <%- include("./partials/header.ejs")  %> 
     </header>
     <h1>Olá mundo</h1>
-   
+
+    <% exibFilme.forEach(element => { %>
+        <a href="/detalhes/<%= element.id %> ">
+        <%= element.nome %>
+        <img src="<%= element.imagem %>"> 
+        </a>
+    <% }) %>
+
 
         <%- include("./partials/footer.ejs")  %> 
 </body>

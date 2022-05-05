@@ -1,3 +1,4 @@
+import { response } from "express";
 import { connection } from "../database/connection.js";
 import { filmes } from "../model/filmes.js"
 // let colecao = [
@@ -10,13 +11,36 @@ import { filmes } from "../model/filmes.js"
 // ];
 
 export const getIndex = async (req, res) => {
-  const exibFilme = await connection.query('SELECT * FROM filmes', {
-    model: filmes
-  })
-  console.log(exibFilme)
 
-  res.render("index.ejs", {
-    exibFilme
-  });
+  try {
+    // const exibFilme = await connection.query('SELECT * FROM filmes', {
+    //   model: filmes
+    // })
+    // console.log(exibFilme)
+    const exibFilme = await filmes.findAll();
+    // console.log(exibFilme);
+  
+    res.render("index.ejs",{
+      exibFilme
+    });
+
+  } catch(error) {
+    res.send(error.message)
+  }
+  
 };
+
+export const getDetalhes = async (req, res) => {
+
+  try{
+    const filmesDetalhes = await filmes.findByPk(req.params.id);
+    
+    res.render("detalhes.ejs", {
+      filmesDetalhes
+    });
+
+  } catch(error){
+    res.send(error.message)
+  }
+}
 
