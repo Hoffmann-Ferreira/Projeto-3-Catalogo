@@ -13,21 +13,14 @@ import { filmes } from "../model/filmes.js"
 export const getIndex = async (req, res) => {
 
   try {
-    // const exibFilme = await connection.query('SELECT * FROM filmes', {
-    //   model: filmes
-    // })
-    // console.log(exibFilme)
     const exibFilme = await filmes.findAll();
-    // console.log(exibFilme);
-  
     res.render("index.ejs",{
       exibFilme
     });
 
   } catch(error) {
     res.send(error.message)
-  }
-  
+  };
 };
 
 export const getDetalhes = async (req, res) => {
@@ -41,6 +34,6 @@ export const getDetalhes = async (req, res) => {
 
   } catch(error){
     res.send(error.message)
-  }
-}
+  };
+};
 

@@ -1,0 +1,82 @@
+/* Garal pagina */
+*{
+    margin: 0;
+    padding: 0;
+}
+ body{
+     width: 98.9vw;
+     height: 100vh;
+     background-color: #000000;
+}
+/* Edição header e navegação */
+header {
+    width: 100%;
+    height: 13%;
+    color: #FFFFFF;
+}
+header #cabecalho {
+    width: 100%;
+    height: 9%;
+    padding: 1%;
+    display: flex;
+    gap: 5%;
+    background-color: #000000b4;
+    position: fixed;
+    border-bottom: solid 0.2px #ffffffd6 ;
+
+}
+header #logo{
+    font-family: 'Monoton', cursive;
+    font-size: 1.5em;
+}
+header nav {
+    width: 20%;
+    display: flex;
+}
+header .caixaNave{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+header .orientacao{
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    text-align: center;
+    background-color: #AF111A;
+    color: #FFFFFF;
+}
+.caixaNave:hover  .orientacao {
+    display: block;
+}
+.ilustracao {
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    margin-left: 35%;
+}
+.ilustracao img{
+    width: 30%;
+}
+/* Edição main, conteúdo principal da página */
+img {
+    width: 20%;
+}
+main{
+    width: 100%;
+    min-height: 80%;
+}
+#infeite{
+    width: 90%;
+    height: 10%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+#infeite img{
+    width: 80%;
+    height: 10%;
+}
+

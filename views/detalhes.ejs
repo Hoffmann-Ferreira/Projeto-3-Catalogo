@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,20 @@
     <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
 </head>
+
 <body>
-    <%- include("./partials/header.ejs")  %> 
+    <%- include("./partials/header.ejs") %>
 
-    <h1><%= filmesDetalhes.nome %> </h1>
-    <img src="<%= filmesDetalhes.imagem %> ">
+        <main>
 
-    <%- include("./partials/footer.ejs")  %> 
+            <h1>
+                <%= filmesDetalhes.nome %>
+            </h1>
+            <img src="<%= filmesDetalhes.imagem %> ">
+
+            <%- include("./partials/footer.ejs") %>
+
+        </main>
 </body>
+
 </html>

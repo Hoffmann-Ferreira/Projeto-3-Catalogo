@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <%- include("./partials/header.ejs")  %> 
-    </header>
-    <h1>Olá mundo</h1>
+    <title>Movie Craze</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <% exibFilme.forEach(element => { %>
-        <a href="/detalhes/<%= element.id %> ">
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+        <figure id="infeite">
+            <img src="/img/filmes.jpg" alt="ilustração de vários filmes">
+        </figure>
+      <h1>Olá mundo</h1>
+
+      <% exibFilme.forEach(element=> { %>
+      <a href="/detalhes/<%= element.id %> ">
         <%= element.nome %>
-        <img src="<%= element.imagem %>"> 
-        </a>
-    <% }) %>
+        <img src="<%= element.imagem %>" />
+      </a>
+      <% }) %>
+    </main>
 
-
-        <%- include("./partials/footer.ejs")  %> 
-</body>
+    <%- include("./partials/footer.ejs") %>
+  </body>
 </html>
