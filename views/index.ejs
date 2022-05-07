@@ -8,28 +8,34 @@
     <title>Movie Craze</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
   </head>
 
   <body>
     <%- include("./partials/header.ejs") %>
     <main>
-        <figure id="infeite">
-            <img src="/img/filmes.jpg" alt="ilustração de vários filmes">
-        </figure>
-      <h1>Olá mundo</h1>
+      <figure>
+        <img src="/img/filmes1.jpg" alt="capa de vários filmes clássicos">
+        <img src="/img/filmes2.jpg" alt="capa de vários filmes clássicos">
+        <img src="/img/filmes3.jpg" alt="capa de vários filmes clássicos">
+      </figure>
 
-      <% exibFilme.forEach(element=> { %>
-      <a href="/detalhes/<%= element.id %> ">
-        <%= element.nome %>
-        <img src="<%= element.imagem %>" />
-      </a>
-      <% }) %>
+      
+      <section>
+        <div id="cards">
+          <div class="card">
+            <% exibFilme.forEach(element=> { %>
+              <%= element.nome %>
+                <a href="/detalhes/<%= element.id %> ">
+                  <img src="<%= element.imagem %>" />
+                </a>
+                <% }) %>
+          </div>
+        </div>
+      </section>
+
     </main>
-
     <%- include("./partials/footer.ejs") %>
+    
   </body>
 </html>

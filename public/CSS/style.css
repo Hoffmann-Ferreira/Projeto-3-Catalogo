@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
  body{
      width: 98.9vw;
@@ -16,9 +17,9 @@ header {
 }
 header #cabecalho {
     width: 100%;
-    height: 9%;
-    padding: 1%;
+    height: 13%;
     display: flex;
+    justify-content: center;
     gap: 5%;
     background-color: #000000b4;
     position: fixed;
@@ -28,10 +29,12 @@ header #cabecalho {
 header #logo{
     font-family: 'Monoton', cursive;
     font-size: 1.5em;
+    margin-top: 1%;
 }
 header nav {
     width: 20%;
     display: flex;
+    margin-top: 1%;
 }
 header .caixaNave{
     width: 50%;
@@ -68,15 +71,23 @@ img {
 main{
     width: 100%;
     min-height: 80%;
+    margin-top: 1%;
 }
-#infeite{
-    width: 90%;
-    height: 10%;
-    margin-left: 10%;
-    margin-right: 5%;
+main figure{
+    display: flex;
+    width: 100%;
+    height: 60vh;
 }
-#infeite img{
-    width: 80%;
-    height: 10%;
+main figure img{
+    width: 100%;
+    height: 100%;
 }
-
+/* edição de cards de filmes */
+main section{
+    width: 100%;
+    height: 80%;
+    border: solid greenyellow;
+}
+section #cards{
+    
+}
