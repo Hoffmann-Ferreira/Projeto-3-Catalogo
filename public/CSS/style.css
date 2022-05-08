@@ -8,6 +8,7 @@
      width: 98.9vw;
      height: 100vh;
      background-color: #000000;
+     font-family: 'Righteous', cursive;
 }
 /* Edição header e navegação */
 header {
@@ -65,9 +66,9 @@ header .orientacao{
     width: 30%;
 }
 /* Edição main, conteúdo principal da página */
-img {
+/* img {
     width: 20%;
-}
+} */
 main{
     width: 100%;
     min-height: 80%;
@@ -87,7 +88,94 @@ main section{
     width: 100%;
     height: 80%;
     border: solid greenyellow;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-section #cards{
+/* section #cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    border: solid red;
     
 }
+section #cards .card{
+    border: solid purple;
+    width: 20%;
+    height: 20%;
+    background-color: #222222;
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 3%;
+    
+}
+section #cards .card img{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+section #cards .card h3{
+    margin-top: 2%;
+} */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .content{
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    align-items: center;
+}
+.container .content img{
+    max-width: 100%;
+    height: 400px;
+    margin-left: 15%;
+    border-radius: 10px;
+}
+.container .content:hover img{
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px #d3d3d3;
+}
+.container .content .texto{
+    position: relative;
+    margin-top:-360px;
+    text-align: center;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.container .content:hover .texto{
+    visibility: visible;
+    transition-delay: 00.3s;
+    cursor: pointer;
+}
+.container .content .links{
+    background-color: #AF111A ;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+
+}
+.container .content .texto h3{
+    color: #FFFFFF;
+    font-size: 2em;
+}
+.container .content .texto a{
+    color: #FFFFFF;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+

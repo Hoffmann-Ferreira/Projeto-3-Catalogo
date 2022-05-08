@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -22,16 +25,29 @@
 
       
       <section>
-        <div id="cards">
-          <div class="card">
-            <% exibFilme.forEach(element=> { %>
-              <%= element.nome %>
-                <a href="/detalhes/<%= element.id %> ">
-                  <img src="<%= element.imagem %>" />
-                </a>
-                <% }) %>
+        <% exibFilme.forEach(element=> { %>
+          <div class="container">
+            <div class="content">
+              <div class="imagem">
+                <img src="<%= element.imagem %>" />
+              </div>
+              <div class="texto">
+                <h3>
+                  <%= element.nome %>
+                </h3>
+                <div class="links">
+                  <a href="/detalhes/<%= element.id %> ">Detalhes</a>
+                </div>
+                <div class="links">
+                  <a href="">Editar</a>
+                </div>
+                <div class="links">
+                  <a href="">Apagar</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+          <% }) %>
       </section>
 
     </main>
