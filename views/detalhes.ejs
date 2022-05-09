@@ -28,15 +28,7 @@
           <img src="<%= filmesDetalhes.imagem %> " />
         </div>
         <div class="trailer">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/0xQSIdSRlAk"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <iframe <%= filmesDetalhes.trailer %> ></iframe>
         </div>
         <div class="informacoes">
           <h3><%= filmesDetalhes.nome %></h3>
@@ -45,15 +37,7 @@
           <p>Sinopse: <%= filmesDetalhes.sinopse %></p>
         </div>
         <div class="critica">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/0xQSIdSRlAk"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <iframe <%= filmesDetalhes.critica %> ></iframe>
         </div>
       </div>
 

@@ -45,7 +45,20 @@ export const getApagar = async (req, res) =>{
 };
 
 export const getCadastrar = (req, res) =>{
-  res.render("cadastro.ejs")
+  res.render("cadastro.ejs");
+
+};
+
+export const postCadastrar = async (req, res) => {
+  const {nome, sinopse, genero, ano, imagem, trailer, critica} = req.body
+  try {
+    await filmes.create({nome, sinopse, genero, ano, imagem, trailer, critica})
+    res.redirect("/")
+
+  } catch (error) {
+    res.send(error.message);
+
+  }
 
 }
 

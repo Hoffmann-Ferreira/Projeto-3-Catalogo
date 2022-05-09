@@ -17,22 +17,30 @@
     
     <%- include("./partials/header.ejs")  %> 
 <main>
-    <form id="formulario" method="post" action="/cadastro">
+    <form id="formulario" method="post" action="/cadastrar">
         <fieldset id="cadastro">
+            <legend>CADASTRAR FILME</legend>
+            
             <label  for="nome">Nome: </label>
             <input type="text" name="nome">
-            <label  for="nome">Sinopse: </label>
+
+            <label  for="sinopse">Sinopse: </label>
             <input type="text" name="sinopse">
-            <label  for="nome">Gênero:</label>
+
+            <label  for="genero">Gênero:</label>
             <input type="text" name="genero">
+
             <label  for="ano">Ano: </label>
             <input type="number" name="numero">
+
             <label  for="imagem">Imagem: </label>
             <input type="url" name="imagem">
+
             <label  for="trailer">trailer: </label>
-            <input type="url" name="trailer">
+            <input type="text" name="trailer">
+
             <label  for="critica">Crítica: </label>
-            <input type="url" name="critica">
+            <input type="text" name="critica">
         </fieldset>
         <button id="botao" type="submit">Enviar</button>
     </form>

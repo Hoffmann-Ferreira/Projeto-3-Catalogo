@@ -312,6 +312,12 @@ footer #rodape .logos img{
     background-color: #AF111A;
     color: #FFFFFF;
     cursor: pointer;
+}
+#formulario legend{
+    margin-left: 30%;
+    font-size: 2em;
+    background-color: #1e1c1dd7;
+    border-radius: 10px;
 
 }
 

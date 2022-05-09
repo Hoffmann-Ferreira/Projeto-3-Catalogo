@@ -22,16 +22,19 @@ export const filmes = connection.define("filmes", {
     },
     ano:{
         type: Sequelize.INTEGER,
-        allowNull: false
+        
     },
     imagem:{
         type: Sequelize.STRING,
+        allowNull: false
     },
     trailer:{
         type: Sequelize.STRING,
+        allowNull: false
     },
     critica:{
         type: Sequelize.STRING,
+        allowNull: false
     }, 
 }, {
     freezeTableName: true,
