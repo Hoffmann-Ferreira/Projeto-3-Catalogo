@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
-        <title>Detalhes</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-      </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
+    <title>Detalhes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <%- include("./partials/header.ejs") %>
 
-        <main>
-            <div id="detalhes">
-                <div class="imgPrinci">
-                    <img src="<%= filmesDetalhes.imagem %> ">
-                </div>
-                <div class="trailer">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0xQSIdSRlAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="informacoes">
-                    <h3>
-                        <%= filmesDetalhes.nome %>
-                    </h3>
-                    <p>
-                        Ano: <%= filmesDetalhes.ano %>
-                    </p>
-                    <p>
-                        Gênero: <%= filmesDetalhes.genero %>
-                    </p>
-                    <p>
-                        Sinopse: <%= filmesDetalhes.sinopse %>
-                    </p>
-                </div>
-                <div class="critica">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0xQSIdSRlAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-           
+    <main>
+      <div id="detalhes">
+        <div class="imgPrinci">
+          <img src="<%= filmesDetalhes.imagem %> " />
         </div>
+        <div class="trailer">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/0xQSIdSRlAk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="informacoes">
+          <h3><%= filmesDetalhes.nome %></h3>
+          <p>Ano: <%= filmesDetalhes.ano %></p>
+          <p>Gênero: <%= filmesDetalhes.genero %></p>
+          <p>Sinopse: <%= filmesDetalhes.sinopse %></p>
+        </div>
+        <div class="critica">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/0xQSIdSRlAk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
 
-            <%- include("./partials/footer.ejs") %>
-
-        </main>
-</body>
-
+      <%- include("./partials/footer.ejs") %>
+    </main>
+  </body>
 </html>

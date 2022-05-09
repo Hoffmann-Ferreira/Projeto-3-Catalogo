@@ -1,14 +1,6 @@
 import { response } from "express";
 import { connection } from "../database/connection.js";
-import { filmes } from "../model/filmes.js"
-// let colecao = [
-//   {
-//     id: 1,
-//     img: "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/92/91/32/20224832.jpg",
-//     nome: "Senhor dos Aneis",
-//     ano: 2001,
-//   },
-// ];
+import { filmes } from "../model/filmes.js";
 
 export const getIndex = async (req, res) => {
 
@@ -36,4 +28,25 @@ export const getDetalhes = async (req, res) => {
     res.send(error.message)
   };
 };
+
+export const getApagar = async (req, res) =>{
+  try{
+    await filmes.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
+    res.redirect("/")
+
+  } catch(error){
+    res.send(error.message)
+  }
+
+};
+
+export const getCadastrar = (req, res) =>{
+  res.render("cadastro.ejs")
+
+}
+
 
