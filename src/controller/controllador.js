@@ -68,7 +68,7 @@ export const postCadastrar = async (req, res) => {
       res.send("O campo critica é obrigatório");
     }else{
       await filmes.create({nome, sinopse, genero, ano, imagem, trailer, critica})
-      res.render("cadastro.ejs",{ toggle: true})
+      res.render('cadastro.ejs',{ toggle: true})
     }
 
   } catch (error) {
