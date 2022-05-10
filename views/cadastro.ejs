@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
     <title>Cadastrar</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
@@ -22,25 +23,25 @@
             <legend>CADASTRAR FILME</legend>
             
             <label  for="nome">Nome: </label>
-            <input type="text" name="nome">
+            <input type="text" name="nome" required>
 
             <label  for="sinopse">Sinopse: </label>
-            <input type="text" name="sinopse">
+            <input type="text" name="sinopse" required>
 
             <label  for="genero">Gênero:</label>
-            <input type="text" name="genero">
+            <input type="text" name="genero" required>
 
             <label  for="ano">Ano: </label>
-            <input type="number" name="numero">
+            <input type="number" name="ano" required>
 
             <label  for="imagem">Imagem: </label>
-            <input type="url" name="imagem">
+            <input type="url" name="imagem" required>
 
             <label  for="trailer">trailer: </label>
-            <input type="text" name="trailer">
+            <input type="text" name="trailer" required>
 
             <label  for="critica">Crítica: </label>
-            <input type="text" name="critica">
+            <input type="text" name="critica" required>
         </fieldset>
         <button id="botao" type="submit">Enviar</button>
     </form>
@@ -48,6 +49,19 @@
 </main>
 
     <%- include("./partials/footer.ejs")  %> 
+
+    <% if (toggle) { %>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Sucesso',
+                text: 'Filme adcionado! Em 5 segundos você será redicionado para página inicial',
+                footer: '<a href="">Why do I have this issue?</a>'
+                })
+                setInterval(() =>{window.location.href = "/"}, 5000)
+        </script>
+     
+    <% } %>
 
 </body>
 </html>
