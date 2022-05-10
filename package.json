@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js -e js,html,css,ejs"
+    "dev": "nodemon index.js -e js,html,css,ejs",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

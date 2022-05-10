@@ -17,14 +17,3 @@ process.env.DATABASE_URL,
 }
    
 );
-
-// process.env.BATABASE_URL,
-// {
-//     dialect: 'postgres',
-//     dialectOptions: {
-//         ssl: {
-//             require: true,
-//             rejectUnauthorized: false
-//         }
-//     }
-// }
