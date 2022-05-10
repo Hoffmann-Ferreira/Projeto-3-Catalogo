@@ -1,4 +1,4 @@
-import { render } from "ejs";
+// import { render } from "ejs";
 import express from "express";
 import path from "path";
 import { routers } from "./src/routers/routers.js";

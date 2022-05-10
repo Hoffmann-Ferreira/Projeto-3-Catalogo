@@ -40,7 +40,7 @@ export const filmes = connection.define("filmes", {
     freezeTableName: true,
     createdAt: false,
     updateAt: false,
-    timestamps: false,
+    timestamps: false
 });
 
 const initTable = async () => {
