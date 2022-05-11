@@ -1,13 +1,12 @@
 import express from "express";
-import { 
-    getIndex, 
-    getDetalhes,
-    getApagar,
-    getCadastrar,
-    postCadastrar,
-    getEditar,
-    postEditar
-
+import {
+  getIndex,
+  getDetalhes,
+  getApagar,
+  getCadastrar,
+  postCadastrar,
+  getEditar,
+  postEditar,
 } from "../controller/controllador.js";
 
 export const routers = express.Router();
@@ -23,4 +22,3 @@ routers.post("/cadastrar", postCadastrar);
 
 routers.get("/editar/:id", getEditar);
 routers.post("/editar/:id", postEditar);
-

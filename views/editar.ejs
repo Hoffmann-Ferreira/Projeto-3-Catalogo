@@ -1,95 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
-    <title>Editar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <%- include("./partials/header.ejs") %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
+  <title>Editar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
     <main>
-      <form
-        id="formulario"
-        method="post"
-        action="/editar/<%= filmeAtual.id %> "
-      >
+      <form id="formulario" method="post" action="/editar/<%= filmeAtual.id %> ">
         <fieldset id="cadastro">
-          <legend>EDITANDO <%= filmeAtual.nome %></legend>
+          <legend>EDITANDO <%= filmeAtual.nome %>
+          </legend>
 
           <label for="nome">Nome: </label>
-          <input
-            type="text"
-            name="nome"
-            required
-            value="<%= filmeAtual.nome %> "
-          />
+          <input type="text" name="nome" required value="<%= filmeAtual.nome %> " />
 
           <label for="sinopse">Sinopse: </label>
-          <input
-            type="text"
-            name="sinopse"
-            required
-            value="<%= filmeAtual.sinopse %>"
-          />
+          <input type="text" name="sinopse" required value="<%= filmeAtual.sinopse %>" />
 
           <label for="genero">Gênero:</label>
-          <input
-            type="text"
-            name="genero"
-            required
-            value="<%= filmeAtual.genero %>"
-          />
+          <input type="text" name="genero" required value="<%= filmeAtual.genero %>" />
 
           <label for="ano">Ano: </label>
-          <input
-            type="number"
-            name="ano"
-            required
-            value="<%= filmeAtual.ano %>"
-          />
+          <input type="number" name="ano" required value="<%= filmeAtual.ano %>" />
 
           <label for="imagem">Imagem: </label>
-          <input
-            type="url"
-            name="imagem"
-            required
-            value="<%= filmeAtual.imagem %>"
-          />
+          <input type="url" name="imagem" required value="<%= filmeAtual.imagem %>" />
 
           <label for="trailer">trailer: </label>
-          <input
-            type="text"
-            name="trailer"
-            required
-            value="<%= filmeAtual.trailer %>"
-          />
+          <input type="text" name="trailer" required value="<%= filmeAtual.trailer %>" />
 
           <label for="critica">Crítica: </label>
-          <input
-            type="text"
-            name="critica"
-            required
-            value="<%= filmeAtual.critica %>"
-          />
+          <input type="text" name="critica" required value="<%= filmeAtual.critica %>" />
         </fieldset>
         <button id="botao" type="submit">Enviar</button>
       </form>
     </main>
 
     <%- include("./partials/footer.ejs") %>
-  </body>
+</body>
+
 </html>

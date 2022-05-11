@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
-    <title>Movie Craze</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
-    <%- include("./partials/header.ejs") %>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/CSS/style.css" rel="stylesheet" type="text/css" />
+  <title>Movie Craze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
     <main>
       <figure>
         <img src="/img/filmes1.jpg" alt="capa de vários filmes clássicos">
@@ -23,7 +24,7 @@
         <img src="/img/filmes3.jpg" alt="capa de vários filmes clássicos">
       </figure>
 
-      
+
       <section>
         <% exibFilme.forEach(element=> { %>
           <div class="container">
@@ -52,6 +53,7 @@
 
     </main>
     <%- include("./partials/footer.ejs") %>
-    
-  </body>
+
+</body>
+
 </html>
